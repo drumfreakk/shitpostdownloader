@@ -55,7 +55,7 @@ def addToHaystack(path):
 for p in haystackPaths:
 	addToHaystack(p)
 
-print haystack
+#print haystack
 
 # loop over the needle paths
 for p in needlePaths:
@@ -64,16 +64,16 @@ for p in needlePaths:
  
 	# grab all image paths that match the hash
 	matchedPaths = haystack.get(imageHash, [])
-	print ' '
-	print p
-	print imageHash
-	print matchedPaths
+#	print ' '
+#	print p
+#	print imageHash
+#	print matchedPaths
 
 	# loop over all matched paths
 	if matchedPaths == []:
 		copyfile(p, p.replace("rest", "main"))
 		addToHaystack(p.replace("rest", "main"))
-		print haystack
+#		print haystack
 
 
 
